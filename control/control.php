@@ -19,7 +19,7 @@
 				break;
 			
 			default:
-				include "index.php";
+				include "page/404.php";
 				break;
 		}
 	}

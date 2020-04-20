@@ -6,8 +6,10 @@
 		$page=$_REQUEST['page'];
 		include (dirname(__FILE__)."/control/".$page.".php");
 	}
-    else 
+    else
+    {
 		include 'page/accueil.php';
+    }
 
 	include 'page/pied.php';
 ?>	
