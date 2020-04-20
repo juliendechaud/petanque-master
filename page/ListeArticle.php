@@ -22,7 +22,7 @@
 		<tr>
 			<td><?php echo $ref; ?></td>
             <td><?php echo $prix; ?>€</td>
-            <td><?php echo $photo; ?></td>
+            <td><?php echo "<img src=".$photo." width='100px'>" ?></td>
             <td><?php echo $descri; ?></td>
             <td><?php echo $categ; ?></td>
 		</tr>
