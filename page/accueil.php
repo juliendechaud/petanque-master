@@ -1,0 +1,1 @@
+<p>Salut, je suis la page d'accueil</p>
