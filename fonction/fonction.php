@@ -41,7 +41,7 @@
 
 		public function getListeCateg()
 		{
-			$req = "SELECT idcateg as id, libelle as lib, COUNT(categorie.idcateg) as nbr FROM categorie INNER JOIN articles ON categorie.idcateg = articles.categ GROUP BY categorie.idcateg";
+			$req = "SELECT idcateg as id, libelle as lib FROM categorie";
 
 			//echo $req;
 			$res = PdoDB::$monPdo->query($req);
@@ -52,8 +52,8 @@
 
 		public function creeArticle($nom,$prix,$photo,$descri,$categ)
 		{
-			$req = "insert into articles (nom, prix, photo, description, categ) values('$nom','$prix','$photo','$descri','$categ')";
-			//echo $req;
+			$req = 'insert into articles (nom, prix, photo, description, categ) values("'.$nom.'","'.$prix.'","'.$photo.'","'.$descri.'","'.$categ.'")';
+			echo $req;
 			PdoDB::$monPdo->exec($req);
 		}
 	}
