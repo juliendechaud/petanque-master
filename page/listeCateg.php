@@ -13,7 +13,8 @@
 
 				echo "<tr><td>".$id."</td>";
             	echo "<td>".$lib."</td>";
-            	echo "<td><a href='index.php?page=control&param=EditCateg&numArt=".$id."'>Modifier</a></td></tr>";
+            	echo "<td><a href='index.php?page=control&param=EditCateg&numCateg=".$id."'>Modifier</a> ";
+            	echo " <a href='index.php?page=control&param=SuppCateg&numCateg=".$id."'>Supprimer</a></td></tr>";
 			}
 		?>
 		</tr>
