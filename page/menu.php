@@ -7,4 +7,5 @@
 	<h1>menu principal</h1>
 	<a href="index.php?page=control&param=Accueil">Accueil</a>
 	<a href="index.php?page=control&param=ListeArticle">Voir les articles</a>
+	<a href="index.php?page=control&param=ListeCateg">Voir les categories</a>
 

@@ -38,6 +38,16 @@
 			$nbLignes = count($lesLignes);
 			return $lesLignes; 
 		}
+
+		public function getListeCateg()
+		{
+			$req = "Select categorie.idcateg as id, categorie.libelle as lib From categorie";
+			//echo $req;
+			$res = PdoDB::$monPdo->query($req);
+			$lesLignes = $res->fetchAll();
+			$nbLignes = count($lesLignes);
+			return $lesLignes; 
+		}
 	}
 
 ?>
