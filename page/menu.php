@@ -9,4 +9,5 @@
 	<a href="index.php?page=control&param=ListeArticle">Voir les articles</a>
 	<a href="index.php?page=control&param=ListeCateg">Voir les catégories</a>
 	<a href="index.php?page=control&param=AjoutArticle">Ajouter un article</a>
+	<a href="index.php?page=control&param=AjoutCateg">Ajouter une catégorie</a>
 
