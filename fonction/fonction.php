@@ -53,7 +53,14 @@
 		public function creeArticle($nom,$prix,$photo,$descri,$categ)
 		{
 			$req = 'insert into articles (nom, prix, photo, description, categ) values("'.$nom.'","'.$prix.'","'.$photo.'","'.$descri.'","'.$categ.'")';
-			echo $req;
+			//echo $req;
+			PdoDB::$monPdo->exec($req);
+		}
+
+		public function creeCateg($lib)
+		{
+			$req = 'insert into categorie (libelle) values("'.$lib.'")';
+			//echo $req;
 			PdoDB::$monPdo->exec($req);
 		}
 	}

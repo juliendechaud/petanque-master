@@ -34,6 +34,15 @@
 				$Pdo->creeArticle($nom,$prix,$photo,$descri,$categ);
 				break;
 
+			case "AjoutCateg" :
+				include (dirname(__FILE__)."/../page/ajoutCateg.php");
+				break;
+
+			case "AjoutCategValid" :
+				$lib = $_REQUEST["lib"];
+				$Pdo->creeCateg($lib);
+				break;
+
 			case "Accueil" :
 				include (dirname(__FILE__)."/../page/accueil.php");
 				break;
