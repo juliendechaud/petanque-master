@@ -4,6 +4,7 @@
 			<td>Id</td>
 			<td>Libelle</td>
 			<td>Nombres d'articles</td>
+			<td>Panneau de contrôle</td>
 		</tr>
 		<?php
 			foreach ($lesLignes as $uneCateg)
@@ -14,7 +15,8 @@
 
 				echo "<tr><td>".$id."</td>";
             	echo "<td>".$lib."</td>";
-            	echo "<td>".$nbr."</td></tr>";
+            	echo "<td>".$nbr."</td>";
+            	echo "<td><a href='index.php?page=control&param=EditCateg&numArt=".$id."'>Modifier</a></td></tr>";
 			}
 		?>
 		</tr>

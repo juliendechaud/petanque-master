@@ -6,7 +6,7 @@
 			<td>Photo</td>
 			<td>Description</td>
 			<td>Catégorie</td>
-			<td>Panneaux de contrôle</td>
+			<td>Panneau de contrôle</td>
 		</tr>
 		<?php
 			foreach ($lesLignes as $unArticle)
