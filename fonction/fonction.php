@@ -31,7 +31,7 @@
 		public function getListeArticles()
 		{
 			$req = "Select articles.ref as ref, articles.nom as nom, articles.prix as prix, articles.photo as photo, articles.description as descri, categorie.libelle as categ From articles";
-			$req.= " Inner Join categorie On articles.categ = categorie.idcateg";
+			$req.= " Inner Join categorie On articles.categ = categorie.idcateg GROUP BY ref";
 			//echo $req;
 			$res = PdoDB::$monPdo->query($req);
 			$lesLignes = $res->fetchAll();
@@ -48,6 +48,13 @@
 			$lesLignes = $res->fetchAll();
 			$nbLignes = count($lesLignes);
 			return $lesLignes; 
+		}
+
+		public function creeArticle($nom,$prix,$photo,$descri,$categ)
+		{
+			$req = "insert into articles (nom, prix, photo, description, categ) values('$nom','$prix','$photo','$descri','$categ')";
+			//echo $req;
+			PdoDB::$monPdo->exec($req);
 		}
 	}
 

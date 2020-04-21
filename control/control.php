@@ -19,6 +19,20 @@
 				include (dirname(__FILE__)."/../page/listeCateg.php");
 				break;
 
+			case "AjoutArticle" :
+				include (dirname(__FILE__)."/../page/ajoutArticle.php");
+				break;
+
+
+			case "AjoutArticleValid" :
+				$nom = $_REQUEST["nom"];
+				$prix = $_REQUEST["prix"];
+				$photo = $_REQUEST["photo"];
+				$descri = $_REQUEST["descri"];
+				$categ = $_REQUEST["categ"];
+				$Pdo->creeArticle($nom,$prix,$photo,$descri,$categ);
+				break;
+
 			case "Accueil" :
 				include (dirname(__FILE__)."/../page/accueil.php");
 				break;
