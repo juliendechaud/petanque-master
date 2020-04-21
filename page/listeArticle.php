@@ -7,7 +7,6 @@
 			<td>Description</td>
 			<td>Catégorie</td>
 		</tr>
-
 		<?php
 			foreach ($lesLignes as $unArticle)
 			{
@@ -16,15 +15,14 @@
 				$photo = $unArticle['photo'];
 				$descri = $unArticle['descri'];
 				$categ = $unArticle['categ'];
+
+				echo "<tr><td>".$ref."</td>";
+            	echo "<td>".$prix."</td>";
+            	echo "<td><img src=".$photo." width='100px'></td>";
+            	echo "<td>".$descri."</td>";
+            	echo "<td>".$categ."</td></tr>";
 			}
 		?>
-
-		<tr>
-			<td><?php echo $ref; ?></td>
-            <td><?php echo $prix; ?>€</td>
-            <td><?php echo "<img src=".$photo." width='100px'>" ?></td>
-            <td><?php echo $descri; ?></td>
-            <td><?php echo $categ; ?></td>
 		</tr>
 
 	</table>
