@@ -30,7 +30,7 @@
 
 		public function getListeArticles()
 		{
-			$req = "Select articles.ref as ref, articles.prix as prix, articles.photo as photo, articles.description as descri, categorie.libelle as categ From articles";
+			$req = "Select articles.ref as ref, articles.nom as nom, articles.prix as prix, articles.photo as photo, articles.description as descri, categorie.libelle as categ From articles";
 			$req.= " Inner Join categorie On articles.categ = categorie.idcateg";
 			//echo $req;
 			$res = PdoDB::$monPdo->query($req);
