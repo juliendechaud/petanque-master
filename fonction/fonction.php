@@ -38,6 +38,17 @@
 			$nbLignes = count($lesLignes);
 			return $lesLignes; 
 		}
+
+		public function getListeCateg()
+		{
+			$req = "SELECT idcateg as id, libelle as lib, COUNT(categorie.idcateg) as nbr FROM categorie INNER JOIN articles ON categorie.idcateg = articles.categ GROUP BY categorie.idcateg";
+
+			//echo $req;
+			$res = PdoDB::$monPdo->query($req);
+			$lesLignes = $res->fetchAll();
+			$nbLignes = count($lesLignes);
+			return $lesLignes; 
+		}
 	}
 
 ?>
