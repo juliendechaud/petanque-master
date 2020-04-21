@@ -11,7 +11,7 @@
 		{
 			case "ListeArticle" :
 				$lesLignes = $Pdo->getListeArticles();
-				include (dirname(__FILE__)."/../page/ListeArticle.php");
+				include (dirname(__FILE__)."/../page/listeArticle.php");
 				break;
 
 			case "Accueil" :
