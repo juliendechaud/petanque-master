@@ -63,6 +63,13 @@
 			//echo $req;
 			PdoDB::$monPdo->exec($req);
 		}
+
+		public function supprimerCateg($id)
+		{
+			$req = 'DELETE FROM categorie WHERE idcateg = "'.$id.'"';
+			//echo $req;
+			PdoDB::$monPdo->exec($req);
+		}
 	}
 
 ?>

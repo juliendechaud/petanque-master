@@ -43,6 +43,11 @@
 				$Pdo->creeCateg($lib);
 				break;
 
+			case "SuppCateg" :
+				$id = $_REQUEST["numCateg"];
+				$Pdo->supprimerCateg($id);
+				break;
+
 			case "Accueil" :
 				include (dirname(__FILE__)."/../page/accueil.php");
 				break;
