@@ -3,7 +3,6 @@
 		<tr>
 			<td>Id</td>
 			<td>Libelle</td>
-			<td>Nombres d'articles</td>
 			<td>Panneau de contrôle</td>
 		</tr>
 		<?php
