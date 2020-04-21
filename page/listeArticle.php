@@ -6,6 +6,7 @@
 			<td>Photo</td>
 			<td>Description</td>
 			<td>Catégorie</td>
+			<td>Panneaux de contrôle</td>
 		</tr>
 		<?php
 			foreach ($lesLignes as $unArticle)
@@ -17,10 +18,11 @@
 				$categ = $unArticle['categ'];
 
 				echo "<tr><td>".$ref."</td>";
-            	echo "<td>".$prix."</td>";
+            	echo "<td>".$prix."€</td>";
             	echo "<td><img src=".$photo." width='100px'></td>";
             	echo "<td>".$descri."</td>";
-            	echo "<td>".$categ."</td></tr>";
+            	echo "<td>".$categ."</td>";
+            	echo "<td><a href='index.php?page=control&param=EditArticle&numArt=".$ref."'>Modifier</a></td></tr>";
 			}
 		?>
 		</tr>
