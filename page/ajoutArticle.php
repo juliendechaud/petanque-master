@@ -27,7 +27,18 @@
 		</div>
 		<div>
 			<label for="categ">Catégorie : </label>
-			<input type="text" name="categ" value="<?php echo $categ ?>" required>
+			<select name="categ">
+				<option value="">Choisir une catégorie</option>
+				<?php
+					foreach ($lesLignes as $uneCateg)
+					{
+						$categ = $uneCateg['id'];
+						$lib = $uneCateg['lib'];
+
+						echo "<option value=".$categ.">".$lib."</option>";
+					}
+				?>
+			</select>
 		</div>
 		<div>
 			<input type="submit" value="Valider">

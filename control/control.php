@@ -20,6 +20,7 @@
 				break;
 
 			case "AjoutArticle" :
+				$lesLignes = $Pdo->getListeCateg();
 				include (dirname(__FILE__)."/../page/ajoutArticle.php");
 				break;
 
