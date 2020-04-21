@@ -3,15 +3,18 @@
 		<tr>
 			<td>Id</td>
 			<td>Libelle</td>
+			<td>Nombres d'articles</td>
 		</tr>
 		<?php
 			foreach ($lesLignes as $uneCateg)
 			{
-				$ref = $uneCateg['id'];
-				$prix = $uneCateg['lib'];
+				$id = $uneCateg['id'];
+				$lib = $uneCateg['lib'];
+				$nbr = $uneCateg['nbr'];
 
-				echo "<tr><td>".$ref."</td>";
-            	echo "<td>".$prix."</td></tr>";
+				echo "<tr><td>".$id."</td>";
+            	echo "<td>".$lib."</td>";
+            	echo "<td>".$nbr."</td></tr>";
 			}
 		?>
 		</tr>
