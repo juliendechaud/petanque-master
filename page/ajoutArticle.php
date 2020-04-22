@@ -16,6 +16,7 @@
 		<div>
 			<label for="prix">Prix : </label>
 			<input type="text" name="prix" value="<?php echo $prix ?>" required>
+			<label for="prix">€</label>
 		</div>
 		<div>
 			<label for="photo">Photo : </label>
@@ -27,7 +28,7 @@
 		</div>
 		<div>
 			<label for="categ">Catégorie : </label>
-			<select name="categ">
+			<select name="categ" required>
 				<option value="">Choisir une catégorie</option>
 				<?php
 					foreach ($lesLignes as $uneCateg)
