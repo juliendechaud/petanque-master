@@ -70,6 +70,30 @@
 			//echo $req;
 			PdoDB::$monPdo->exec($req);
 		}
+
+		public function getArticle($ref)
+		{
+			$req = "SELECT * FROM articles WHERE ref = ".$ref;
+			//echo $req;
+			$res = PdoDB::$monPdo->query($req);
+			$laLigne = $res->fetch();
+			return $laLigne;
+		}
+
+		public function getCateg($id)
+		{
+			$req = "SELECT * FROM categorie WHERE idcateg = ".$id;
+			//echo $req;
+			$res = PdoDB::$monPdo->query($req);
+			$laLigne = $res->fetch();
+			return $laLigne;
+		}
+
+		public function updateArticle($ref,$nom,$prix,$photo,$descri,$categ)
+		{
+			$req = 'UPDATE articles set articles.nom = "'.$nom.'", articles.prix = "'.$prix.'", articles.photo = "'.$photo.'", articles.description = "'.$descri.'", articles.categ = "'.$categ.'" WHERE articles.ref = "'.$ref.'"';
+			PdoDB::$monPdo->exec($req);
+		}
 	}
 
 ?>
