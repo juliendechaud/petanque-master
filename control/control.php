@@ -70,6 +70,18 @@
 				$Pdo->updateArticle($ref,$nom,$prix,$photo,$descri,$categ);
 				break;
 
+			case "ModifCateg" :
+				$id = $_REQUEST["numCateg"];
+				$uneCateg = $Pdo->getCateg($id);
+				include (dirname(__FILE__)."/../page/modifCateg.php");
+				break;
+
+			case "ModifCategValid" :
+				$id = $_REQUEST["id"];
+				$lib = $_REQUEST["lib"];
+				$Pdo->updateCateg($id,$lib);
+				break;
+
 			case "Accueil" :
 				include (dirname(__FILE__)."/../page/accueil.php");
 				break;

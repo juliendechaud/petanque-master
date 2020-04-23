@@ -1,6 +1,6 @@
 <div>
 	
-	<p>ajouter un article</p>
+	<p>ajouter une catégorie</p>
 	<form action="index.php?page=control&param=AjoutCategValid" method="post">
 		<?php
 			$lib = "";

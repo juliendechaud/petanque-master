@@ -101,6 +101,12 @@
 			$req = 'UPDATE articles set articles.nom = "'.$nom.'", articles.prix = "'.$prix.'", articles.photo = "'.$photo.'", articles.description = "'.$descri.'", articles.categ = "'.$categ.'" WHERE articles.ref = "'.$ref.'"';
 			PdoDB::$monPdo->exec($req);
 		}
+
+		public function updateCateg($id,$libelle)
+		{
+			$req = 'UPDATE categorie set categorie.libelle = "'.$libelle.'" WHERE categorie.idcateg = "'.$id.'"';
+			PdoDB::$monPdo->exec($req);
+		}
 	}
 
 ?>
