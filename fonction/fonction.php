@@ -71,6 +71,13 @@
 			PdoDB::$monPdo->exec($req);
 		}
 
+		public function supprimerArticle($id)
+		{
+			$req = 'DELETE FROM articles WHERE ref = "'.$id.'"';
+			//echo $req;
+			PdoDB::$monPdo->exec($req);
+		}
+
 		public function getArticle($ref)
 		{
 			$req = "SELECT * FROM articles WHERE ref = ".$ref;

@@ -25,7 +25,8 @@
             	echo "<td><img src=".$photo." width='100px'></td>";
             	echo "<td>".$descri."</td>";
             	echo "<td>".$categ."</td>";
-            	echo "<td><a href='index.php?page=control&param=ModifArticle&numArt=".$ref."'>Modifier</a></td></tr>";
+            	echo "<td><a href='index.php?page=control&param=ModifArticle&numArt=".$ref."'>Modifier</a> ";
+            	echo " <a href='index.php?page=control&param=SuppArticle&numArt=".$ref."'>Supprimer</a></td></tr>";
 			}
 		?>
 		</tr>
