@@ -48,6 +48,11 @@
 				$Pdo->supprimerCateg($id);
 				break;
 
+			case "SuppArticle" :
+				$id = $_REQUEST["numArt"];
+				$Pdo->supprimerArticle($id);
+				break;
+
 			case "ModifArticle" :
 				$lesLignes = $Pdo->getListeCateg();
 				$ref = $_REQUEST["numArt"];
