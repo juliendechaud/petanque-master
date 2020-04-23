@@ -3,12 +3,17 @@
 	<p>modifier un article</p>
 	<form action="index.php?page=control&param=ModifArticleValid" method="post">
 		<?php
+			$ref = $unArticle["ref"];
 			$nom = $unArticle["nom"];
 			$prix = $unArticle["prix"];
 			$photo = $unArticle["photo"];
 			$descri = $unArticle["description"];
 			$lacateg = $unArticle["categ"];
 		?>
+		<div>
+			<label for="ref">Ref : </label>
+			<input type="text" name="ref" value="<?php echo $ref ?>" readonly>
+		</div>
 		<div>
 			<label for="nom">Nom : </label>
 			<input type="text" name="nom" value="<?php echo $nom ?>" required>

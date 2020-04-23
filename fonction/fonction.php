@@ -88,6 +88,12 @@
 			$laLigne = $res->fetch();
 			return $laLigne;
 		}
+
+		public function updateArticle($ref,$nom,$prix,$photo,$descri,$categ)
+		{
+			$req = 'UPDATE articles set articles.nom = "'.$nom.'", articles.prix = "'.$prix.'", articles.photo = "'.$photo.'", articles.description = "'.$descri.'", articles.categ = "'.$categ.'" WHERE articles.ref = "'.$ref.'"';
+			PdoDB::$monPdo->exec($req);
+		}
 	}
 
 ?>

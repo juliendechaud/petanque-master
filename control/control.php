@@ -52,8 +52,17 @@
 				$lesLignes = $Pdo->getListeCateg();
 				$ref = $_REQUEST["numArt"];
 				$unArticle = $Pdo->getArticle($ref);
-				$laCateg = $Pdo->getCateg($unArticle["categ"]);
 				include (dirname(__FILE__)."/../page/modifArticle.php");
+				break;
+
+			case "ModifArticleValid" :
+				$ref = $_REQUEST["ref"];
+				$nom = $_REQUEST["nom"];
+				$prix = $_REQUEST["prix"];
+				$photo = $_REQUEST["photo"];
+				$descri = $_REQUEST["descri"];
+				$categ = $_REQUEST["categ"];
+				$Pdo->updateArticle($ref,$nom,$prix,$photo,$descri,$categ);
 				break;
 
 			case "Accueil" :
