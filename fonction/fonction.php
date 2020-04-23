@@ -70,6 +70,15 @@
 			//echo $req;
 			PdoDB::$monPdo->exec($req);
 		}
+
+		public function getArticle($ref)
+		{
+			$req = "SELECT * FROM articles WHERE ref = ".$ref;
+			//echo $req;
+			$res = PdoDB::$monPdo->query($req);
+			$laLigne = $res->fetch();
+			return $laLigne;
+		}
 	}
 
 ?>
