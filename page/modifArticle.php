@@ -7,7 +7,7 @@
 			$prix = $unArticle["prix"];
 			$photo = $unArticle["photo"];
 			$descri = $unArticle["description"];
-			$categ = $unArticle["categ"];
+			$lacateg = $unArticle["categ"];
 		?>
 		<div>
 			<label for="nom">Nom : </label>
@@ -33,10 +33,17 @@
 				<?php
 					foreach ($lesLignes as $uneCateg)
 					{
-						$catego = $uneCateg['id'];
+						$categ = $uneCateg['id'];
 						$lib = $uneCateg['lib'];
 
-						echo "<option value=".$categ.">".$lib."</option>";
+						if ($categ == $lacateg)
+						{
+							echo "<option value=".$categ." selected>".$lib."</option>";
+						}
+						else
+						{
+							echo "<option value=".$categ.">".$lib."</option>";
+						}
 					}
 				?>
 			</select>

@@ -79,6 +79,15 @@
 			$laLigne = $res->fetch();
 			return $laLigne;
 		}
+
+		public function getCateg($id)
+		{
+			$req = "SELECT * FROM categorie WHERE idcateg = ".$id;
+			//echo $req;
+			$res = PdoDB::$monPdo->query($req);
+			$laLigne = $res->fetch();
+			return $laLigne;
+		}
 	}
 
 ?>

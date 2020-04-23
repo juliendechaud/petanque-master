@@ -52,6 +52,7 @@
 				$lesLignes = $Pdo->getListeCateg();
 				$ref = $_REQUEST["numArt"];
 				$unArticle = $Pdo->getArticle($ref);
+				$laCateg = $Pdo->getCateg($unArticle["categ"]);
 				include (dirname(__FILE__)."/../page/modifArticle.php");
 				break;
 
