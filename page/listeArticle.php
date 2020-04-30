@@ -9,7 +9,7 @@
 			<td>Catégorie</td>
 
 			<?php
-				if (isset($_SESSION['admin'])==1)
+				if (isset($_SESSION['admin']) && $_SESSION['admin']==1)
 				{
 					echo '<td>Panneau de contrôle</td>';
 				}
@@ -32,7 +32,8 @@
             	echo "<td>".$descri."</td>";
             	echo "<td>".$categ."</td>";
 
-            	if (isset($_SESSION['admin'])==1) {
+            	if (isset($_SESSION['admin']) && $_SESSION['admin']==1)
+            	{
             		echo "<td><a href='index.php?page=control&param=ModifArticle&numArt=".$ref."'>Modifier</a> ";
             		echo " <a href='index.php?page=control&param=SuppArticle&numArt=".$ref."'>Supprimer</a></td>";
             	}
