@@ -1,6 +1,6 @@
 <?php
+	session_start();
 	include 'page/menu.php';
-	
 	if (isset($_REQUEST['page']))
 	{
 		$page=$_REQUEST['page'];
@@ -10,6 +10,5 @@
     {
 		include 'page/accueil.php';
     }
-
 	include 'page/pied.php';
 ?>	

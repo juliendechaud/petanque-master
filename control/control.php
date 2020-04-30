@@ -82,6 +82,20 @@
 				$Pdo->updateCateg($id,$lib);
 				break;
 
+			case "Connexion" :
+				include (dirname(__FILE__)."/../page/connexion.php");
+				break;
+
+			case "ConnexionValid" :
+				$email = $_REQUEST["email"];
+				$mdp = $_REQUEST["mdp"];
+				$Pdo->connexion($email,$mdp);
+				break;
+
+			case "Deconnexion" :
+				$Pdo->deconnexion();
+				break;
+
 			case "Accueil" :
 				include (dirname(__FILE__)."/../page/accueil.php");
 				break;
