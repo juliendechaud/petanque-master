@@ -118,8 +118,8 @@
 			{
 				$_SESSION['id'] = $laLigne['mail'];
 				$_SESSION['nom'] = $laLigne['nom'];
-				echo "Connexion réussi !";
-				
+				$_SESSION['admin'] = $laLigne['admin'];
+				echo "Connexion réussi !";	
 			}
 			else
 			{
