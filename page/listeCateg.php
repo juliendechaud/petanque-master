@@ -3,7 +3,12 @@
 		<tr>
 			<td>Id</td>
 			<td>Libelle</td>
-			<td>Panneau de contrôle</td>
+			<?php
+				if (isset($_SESSION['admin']) && $_SESSION['admin']==1)
+				{
+					echo "<td>Panneau de contrôle</td>";
+				}
+			?>
 		</tr>
 		<?php
 			foreach ($lesLignes as $uneCateg)
@@ -13,8 +18,12 @@
 
 				echo "<tr><td>".$id."</td>";
             	echo "<td>".$lib."</td>";
-            	echo "<td><a href='index.php?page=control&param=ModifCateg&numCateg=".$id."'>Modifier</a> ";
-            	echo " <a href='index.php?page=control&param=SuppCateg&numCateg=".$id."'>Supprimer</a></td></tr>";
+            	if (isset($_SESSION['admin']) && $_SESSION['admin']==1)
+            	{
+            		echo "<td><a href='index.php?page=control&param=ModifCateg&numCateg=".$id."'>Modifier</a> ";
+            		echo " <a href='index.php?page=control&param=SuppCateg&numCateg=".$id."'>Supprimer</a></td>";
+            	}
+            	echo "</tr>";
 			}
 		?>
 		</tr>
