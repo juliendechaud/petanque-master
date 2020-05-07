@@ -20,9 +20,18 @@
 				break;
 
 			case "AjoutArticle" :
-				$lesLignes = $Pdo->getListeCateg();
-				include (dirname(__FILE__)."/../page/ajoutArticle.php");
-				break;
+				if ($Pdo->verifadmin()==True)
+				{
+					$lesLignes = $Pdo->getListeCateg();
+					include (dirname(__FILE__)."/../page/ajoutArticle.php");
+					break;
+				}
+				else
+				{
+					include (dirname(__FILE__)."/../page/notpass.php");
+					break;
+				}
+				
 
 
 			case "AjoutArticleValid" :

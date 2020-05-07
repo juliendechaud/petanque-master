@@ -132,6 +132,18 @@
 		{
 			session_destroy();
 		}
+
+		public function verifadmin()
+		{
+			if (isset($_SESSION['admin']) && $_SESSION['admin']==1)
+			{
+				return True;
+			}
+			else
+			{
+				return False;
+			}
+		}
 	}
 
 ?>
