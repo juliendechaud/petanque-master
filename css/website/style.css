@@ -1,0 +1,19 @@
+.trait
+{
+background-color: grey;
+height: 1pt;
+width: 100%;
+}
+
+.head{
+	text-align: right;
+}
+
+a.gris{
+	text-align: right;
+	color: grey;
+}
+
+a.gris:hover {
+	color: #333333;
+}
