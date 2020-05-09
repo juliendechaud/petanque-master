@@ -10,7 +10,7 @@
 		<a class="gris" href="index.php?page=control&param=Accueil">Mon Compte | </a>
 		<a class="gris" href="index.php?page=control&param=Accueil">Panier | </a>
 		<a class="gris" href="index.php?page=control&param=Accueil">S'identifier |</a>
-		<a class="gris" href="index.php?page=control&param=Accueil">Inscription | </a>
+		<a class="gris" href="index.php?page=control&param=Accueil">Inscription</a>
 	</div>
 
 
