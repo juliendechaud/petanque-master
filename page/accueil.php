@@ -116,7 +116,7 @@ Au sein de notre magasin à Brives charensac, nous disposons de notre propre ate
 Depuis 2019, des milliers de clients ont fait confiance au professionnalisme de Petanque Master, faites comme eux ! Bonne visite sur notre super site du futur !</p>
       </div>
     <div class="col-5">
-      <img src="img/website/carreau.png" width="380px">
+      <img src="img/website/Carreau.png" width="380px">
     </div>
   </div>
 </div>
@@ -132,7 +132,7 @@ Depuis 2019, des milliers de clients ont fait confiance au professionnalisme de 
       </div>
       <div class="col-sm margin">
         <a href="#">
-          <img src="img/website/retours_gratuits.png" height="100px">
+          <img src="img/website/Retours_gratuits.png" height="100px">
         </a>
       </div>
       <div class="col-sm margin">
