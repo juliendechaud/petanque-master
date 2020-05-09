@@ -1,6 +1,6 @@
 <?php
+	session_start();
 	include 'page/menu.php';
-	
 	if (isset($_REQUEST['page']))
 	{
 		$page=$_REQUEST['page'];
@@ -12,6 +12,5 @@
     	$_REQUEST["param"]="Accueil";
     	include (dirname(__FILE__)."/control/".$page.".php");
     }
-
 	include 'page/pied.php';
 ?>	

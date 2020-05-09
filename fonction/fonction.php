@@ -107,6 +107,43 @@
 			$req = 'UPDATE categorie set categorie.libelle = "'.$libelle.'" WHERE categorie.idcateg = "'.$id.'"';
 			PdoDB::$monPdo->exec($req);
 		}
+
+		public function connexion($email,$mdp)
+		{
+			$req = "SELECT * FROM utilisateur WHERE mail = '".$email."' and mdp = '$mdp'";
+			//echo $req;
+			$res = PdoDB::$monPdo->query($req);
+			$laLigne = $res->fetch();
+			if ($laLigne)
+			{
+				$_SESSION['id'] = $laLigne['mail'];
+				$_SESSION['nom'] = $laLigne['nom'];
+				$_SESSION['admin'] = $laLigne['admin'];
+				echo "Connexion réussi !";	
+			}
+			else
+			{
+				echo "Erreur";
+			}	
+			return $laLigne;
+		}
+
+		public function deconnexion()
+		{
+			session_destroy();
+		}
+
+		public function verifadmin()
+		{
+			if (isset($_SESSION['admin']) && $_SESSION['admin']==1)
+			{
+				return True;
+			}
+			else
+			{
+				return False;
+			}
+		}
 	}
 
 ?>

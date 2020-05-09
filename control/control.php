@@ -20,11 +20,18 @@
 				break;
 
 			case "AjoutArticle" :
-				$lesLignes = $Pdo->getListeCateg();
-				include (dirname(__FILE__)."/../page/ajoutArticle.php");
-				break;
-
-
+				if ($Pdo->verifadmin()==True)
+				{
+					$lesLignes = $Pdo->getListeCateg();
+					include (dirname(__FILE__)."/../page/ajoutArticle.php");
+					break;
+				}
+				else
+				{
+					include (dirname(__FILE__)."/../page/notpass.php");
+					break;
+				}
+				
 			case "AjoutArticleValid" :
 				$nom = $_REQUEST["nom"];
 				$prix = $_REQUEST["prix"];
@@ -35,8 +42,17 @@
 				break;
 
 			case "AjoutCateg" :
-				include (dirname(__FILE__)."/../page/ajoutCateg.php");
-				break;
+				if ($Pdo->verifadmin()==True)
+				{
+					include (dirname(__FILE__)."/../page/ajoutCateg.php");
+					break;
+				}
+				else
+				{
+					include (dirname(__FILE__)."/../page/notpass.php");
+					break;
+
+				}
 
 			case "AjoutCategValid" :
 				$lib = $_REQUEST["lib"];
@@ -80,6 +96,20 @@
 				$id = $_REQUEST["id"];
 				$lib = $_REQUEST["lib"];
 				$Pdo->updateCateg($id,$lib);
+				break;
+
+			case "Connexion" :
+				include (dirname(__FILE__)."/../page/connexion.php");
+				break;
+
+			case "ConnexionValid" :
+				$email = $_REQUEST["email"];
+				$mdp = $_REQUEST["mdp"];
+				$Pdo->connexion($email,$mdp);
+				break;
+
+			case "Deconnexion" :
+				$Pdo->deconnexion();
 				break;
 
 			case "Accueil" :

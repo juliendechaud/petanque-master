@@ -13,8 +13,6 @@
 		<a class="gris" href="index.php?page=control&param=Accueil">Inscription</a>
 	</div>
 
-
-
 	<div class="trait"></div>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#"><img src="img/website/petanque-master-logo.png" alt="Photo de montagne" width="120px" /></a>

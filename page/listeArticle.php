@@ -7,7 +7,13 @@
 			<td>Photo</td>
 			<td>Description</td>
 			<td>Catégorie</td>
-			<td>Panneau de contrôle</td>
+
+			<?php
+				if (isset($_SESSION['admin']) && $_SESSION['admin']==1)
+				{
+					echo '<td>Panneau de contrôle</td>';
+				}
+			?>
 		</tr>
 		<?php
 			foreach ($lesLignes as $unArticle)
@@ -25,8 +31,13 @@
             	echo "<td><img src=".$photo." width='100px'></td>";
             	echo "<td>".$descri."</td>";
             	echo "<td>".$categ."</td>";
-            	echo "<td><a href='index.php?page=control&param=ModifArticle&numArt=".$ref."'>Modifier</a> ";
-            	echo " <a href='index.php?page=control&param=SuppArticle&numArt=".$ref."'>Supprimer</a></td></tr>";
+
+            	if (isset($_SESSION['admin']) && $_SESSION['admin']==1)
+            	{
+            		echo "<td><a href='index.php?page=control&param=ModifArticle&numArt=".$ref."'>Modifier</a> ";
+            		echo " <a href='index.php?page=control&param=SuppArticle&numArt=".$ref."'>Supprimer</a></td>";
+            	}
+            	echo "</tr>";
 			}
 		?>
 		</tr>
