@@ -9,8 +9,21 @@
 	<div class="head">
 		<a class="gris" href="index.php?page=control&param=Accueil">Mon Compte | </a>
 		<a class="gris" href="index.php?page=control&param=Accueil">Panier | </a>
-		<a class="gris" href="index.php?page=control&param=Accueil">S'identifier |</a>
-		<a class="gris" href="index.php?page=control&param=Accueil">Inscription</a>
+    <?php
+
+      if (!isset($_SESSION['id']))
+      {
+        echo "<a class='gris' href='index.php?page=control&param=Connexion'>S'identifier |</a>";
+        echo "<a class='gris' href='index.php?page=control&param=Inscription'>Inscription</a>";
+      }
+      else
+      {
+        echo "<a class='gris' href='index.php?page=control&param=Accueil'>".$_SESSION['nom']." |</a>";
+        echo "<a class='gris' href='index.php?page=control&param=Deconnexion'>Déconnexion</a>";
+      }  
+
+    ?>
+
 	</div>
 
 	<div class="trait"></div>
@@ -31,12 +44,21 @@
       <li class="nav-item">
         <a class="nav-link" href="index.php?page=control&param=ListeCateg">Catégories<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.php?page=control&param=AjoutArticle">Ajouter un article<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.php?page=control&param=AjoutCateg">Ajouter une categorie <span class="sr-only">(current)</span></a>
-      </li>
+
+      <?php
+        if (isset($_SESSION['id']) && ($_SESSION['admin']==1))
+        {
+          ?>
+          <li class="nav-item">
+          <a class="nav-link" href="index.php?page=control&param=AjoutArticle">Ajouter un article<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?page=control&param=AjoutCateg">Ajouter une categorie <span class="sr-only">(current)</span></a>
+          </li>
+          <?php
+        }
+      ?>
+      
       <li class="nav-item">
         <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
       </li>
