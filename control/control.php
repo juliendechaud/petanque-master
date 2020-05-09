@@ -32,8 +32,6 @@
 					break;
 				}
 				
-
-
 			case "AjoutArticleValid" :
 				$nom = $_REQUEST["nom"];
 				$prix = $_REQUEST["prix"];
@@ -44,8 +42,17 @@
 				break;
 
 			case "AjoutCateg" :
-				include (dirname(__FILE__)."/../page/ajoutCateg.php");
-				break;
+				if ($Pdo->verifadmin()==True)
+				{
+					include (dirname(__FILE__)."/../page/ajoutCateg.php");
+					break;
+				}
+				else
+				{
+					include (dirname(__FILE__)."/../page/notpass.php");
+					break;
+
+				}
 
 			case "AjoutCategValid" :
 				$lib = $_REQUEST["lib"];
