@@ -19,7 +19,7 @@
       else
       {
         echo "<a class='gris' href='index.php?page=control&param=Accueil'>".$_SESSION['nom']." |</a>";
-        echo "<a class='gris' href='index.php?page=control&param=Deconnexion'>Déconnexion</a>";
+        echo "<a class='gris' href='index.php?page=control&param=Deconnexion'> Déconnexion</a>";
       }  
 
     ?>
