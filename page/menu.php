@@ -1,32 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-	<title>Pétanque master</title>
+	<meta charset="UTF-8">
+	<title>Petanque master</title>
+	<link rel="icon" type="image/png" href="img/website/logo rond.png" />
 </head>
 <body>
-	<h1>menu principal</h1>
-	<a href="index.php?page=control&param=Accueil">Accueil</a>
-	<a href="index.php?page=control&param=ListeArticle">Voir les articles</a>
-	<a href="index.php?page=control&param=ListeCateg">Voir les catégories</a>
+	<div class="head">
+		<a class="gris" href="index.php?page=control&param=Accueil">Mon Compte | </a>
+		<a class="gris" href="index.php?page=control&param=Accueil">Panier | </a>
+		<a class="gris" href="index.php?page=control&param=Accueil">S'identifier |</a>
+		<a class="gris" href="index.php?page=control&param=Accueil">Inscription</a>
+	</div>
 
-	<?php
+	<div class="trait"></div>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><img src="img/website/petanque-master-logo.png" alt="Photo de montagne" width="120px" /></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-		if (!isset($_SESSION['id']))
-		{
-			echo '<a href="index.php?page=control&param=Connexion">Connexion</a>';
-		}
-		elseif ($_SESSION['admin']==1)
-		{
-			echo "<a href='index.php?page=control&param=AjoutArticle'>Ajouter un article</a>";
-			echo "<a href='index.php?page=control&param=AjoutCateg'>Ajouter une catégorie</a>";
-			echo $_SESSION['nom'];
-			echo '<a href="index.php?page=control&param=Deconnexion">Deconnexion</a>';
-		}
-		else
-		{
-			echo $_SESSION['nom'];
-			echo '<a href="index.php?page=control&param=Deconnexion">Deconnexion</a>';
-		}
-
-	?>
-
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php?page=control&param=Accueil">Accueil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?page=control&param=ListeArticle">Articles<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?page=control&param=ListeCateg">Catégories<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?page=control&param=AjoutArticle">Ajouter un article<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?page=control&param=AjoutCateg">Ajouter une categorie <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+    </form>
+  </div>
+</nav>

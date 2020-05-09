@@ -8,7 +8,9 @@
 	}
     else
     {
-		include 'page/accueil.php';
+    	$page=$_REQUEST["page"]="control";
+    	$_REQUEST["param"]="Accueil";
+    	include (dirname(__FILE__)."/control/".$page.".php");
     }
 	include 'page/pied.php';
 ?>	
