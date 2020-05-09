@@ -1,0 +1,32 @@
+.Mvente{
+	color: #3b3b3b;
+	margin-left: 2.5%;
+	margin-top: 5px;
+	font-size: 22px;
+	font-family: 'Fredoka One', cursive;
+	text-align: center;
+}
+
+.traitBleu{
+	background-color: grey;
+	height: 0.5px;
+	width: 60%;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+.margin{
+	margin: 20px;
+}
+
+.bouton{
+	font-family: 'Fredoka One', cursive;
+}
+
+.margintop{
+	margin-top: 45px;
+}
+
+.police{
+	font-family: 'Fredoka One', cursive;
+}

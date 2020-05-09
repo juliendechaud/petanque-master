@@ -83,6 +83,10 @@
 				break;
 
 			case "Accueil" :
+				$Article1 = $Pdo->getArticle(1);
+				$Article2 = $Pdo->getArticle(2);
+				$Article3 = $Pdo->getArticle(9);
+				$Article4 = $Pdo->getArticle(10);
 				include (dirname(__FILE__)."/../page/accueil.php");
 				break;
 			
