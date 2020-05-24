@@ -63,8 +63,10 @@
         <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
+    <form class="form-inline my-2 my-lg-0" action="index.php">
+      <input type="hidden" name="page" value="control">
+      <input type="hidden" name="param" value="search">
+      <input class="form-control mr-sm-2" name="q" value="<?php if(isset($q)) { echo $q; } ?>" type="search" placeholder="Recherche" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
     </form>
   </div>

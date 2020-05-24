@@ -108,6 +108,16 @@
 			PdoDB::$monPdo->exec($req);
 		}
 
+		public function recherche($mots)
+		{
+			$req = "SELECT * FROM articles WHERE nom LIKE '%".$mots."%' OR description LIKE '%".$mots."%'";
+			//echo $req;
+			$res = PdoDB::$monPdo->query($req);
+			$lesLignes = $res->fetchAll();
+			$nbLignes = count($lesLignes);
+			return $lesLignes; 
+		}
+
 		public function connexion($email,$mdp)
 		{
 			$req = "SELECT * FROM utilisateur WHERE mail = '".$email."' and mdp = '$mdp'";

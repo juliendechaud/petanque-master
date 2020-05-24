@@ -97,10 +97,17 @@
 				$lib = $_REQUEST["lib"];
 				$Pdo->updateCateg($id,$lib);
 				break;
+
 			case "Article" :
 				$ref = $_REQUEST["numArt"];
 				$laLigne = $Pdo->getArticle($ref);
 				include (dirname(__FILE__)."/../page/unArticle.php");
+				break;
+
+			case "search" :
+				$mots = $_REQUEST['q'];
+				$lesLignes = $Pdo->recherche($mots);
+				include (dirname(__FILE__)."/../page/search.php");
 				break;
 
 			case "Connexion" :
