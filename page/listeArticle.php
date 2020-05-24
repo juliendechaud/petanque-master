@@ -26,7 +26,7 @@
 				$categ = $unArticle['categ'];
 
 				echo "<tr><td>".$ref."</td>";
-				echo "<td>".$nom."</td>";
+				echo "<td><a href='index.php?page=control&param=Article&numArt=".$ref."'>".$nom."</a></td>";
             	echo "<td>".$prix."€</td>";
             	echo "<td><img src=".$photo." width='100px'></td>";
             	echo "<td>".$descri."</td>";
