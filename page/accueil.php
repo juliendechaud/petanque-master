@@ -100,7 +100,6 @@
     </div>
   </div>
   </div>
-</div>
 <div class="bouton margin">
 <center><a href="index.php?page=control&param=ListeArticle" class="btn btn-warning" role="button">Découvrir tous nos produits</a></center>
 </div>
@@ -146,3 +145,4 @@ Depuis 2019, des milliers de clients ont fait confiance au professionnalisme de 
         </a>
       </div>
     </div>
+</div>
