@@ -116,6 +116,10 @@
 				include (dirname(__FILE__)."/../page/search.php");
 				break;
 
+			case "contact" :
+				include (dirname(__FILE__)."/../page/contact.php");
+				break;
+
 			case "Connexion" :
 				include (dirname(__FILE__)."/../page/connexion.php");
 				break;
