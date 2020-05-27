@@ -1,20 +1,17 @@
-<div>
+<div class="police">
 	<table>
-		<tr>
-			<td>Ref</td>
-			<td>Nom</td>
-			<td>Prix</td>
-			<td>Photo</td>
-			<td>Description</td>
-			<td>Catégorie</td>
 
 			<?php
 				if (isset($_SESSION['admin']) && $_SESSION['admin']==1)
 				{
-					echo '<td>Panneau de contrôle</td>';
+					
 				}
 			?>
-		</tr>
+			<br>
+		<center><h1>Nos Articles</h1></center>
+		<br>
+		<div style="color: blue;">
+		<center>
 		<?php
 			foreach ($lesLignes as $unArticle)
 			{
@@ -25,21 +22,26 @@
 				$descri = $unArticle['descri'];
 				$categ = $unArticle['categ'];
 
-				echo "<tr><td>".$ref."</td>";
-				echo "<td><a href='index.php?page=control&param=Article&numArt=".$ref."'>".$nom."</a></td>";
-            	echo "<td>".$prix."€</td>";
-            	echo "<td><img src=".$photo." width='100px'></td>";
-            	echo "<td>".$descri."</td>";
-            	echo "<td>".$categ."</td>";
+				//echo "<tr><td>".$ref."</td>";
+				echo "<img src=".$photo." width='200px'>";
+				echo "<br><a style='color: black' href='index.php?page=control&param=Article&numArt=".$ref."'>".$nom."</a><br>";
+            	echo "".$prix."€";
+            	echo "<br>";
+            	//echo "<td>".$descri."</td>";
+            	//echo "<td>".$categ."</td>";
+            	
 
             	if (isset($_SESSION['admin']) && $_SESSION['admin']==1)
             	{
-            		echo "<td><a href='index.php?page=control&param=ModifArticle&numArt=".$ref."'>Modifier</a> ";
-            		echo " <a href='index.php?page=control&param=SuppArticle&numArt=".$ref."'>Supprimer</a></td>";
+            		echo "<a style='color:red' href='index.php?page=control&param=ModifArticle&numArt=".$ref."'>Modifier</a> ";
+            		echo " <a <a style='color:red' href='index.php?page=control&param=SuppArticle&numArt=".$ref."'>Supprimer</a>";
             	}
-            	echo "</tr>";
+            	
+            	echo "<div class='traitBleu'> </div>";
 			}
 		?>
+	</center>
+</div>
 		</tr>
 
 	</table>
