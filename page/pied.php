@@ -16,7 +16,7 @@
               </dl>
               <dl class="contact-list">
                 <dt>email:</dt>
-                <dd><a href="mailto:#">pertanque.master@gmail.com</a></dd>
+                <dd><a href="mailto:#">petanque.master@gmail.com</a></dd>
               </dl>
               <dl class="contact-list">
                 <dt>telephone:</dt>
