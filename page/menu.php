@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<meta charset="UTF-8">
-	<title>Petanque master</title>
-	<link rel="icon" type="image/png" href="img/website/logo rond.png" />
+  <meta charset="UTF-8">
+  <title>Petanque master</title>
+  <link rel="icon" type="image/png" href="img/website/logo rond.png" />
 </head>
 <body>
-	<div class="head">
-		<a class="gris" href="index.php?page=control&param=Accueil">Mon Compte | </a>
-		<a class="gris" href="index.php?page=control&param=Accueil">Panier | </a>
+  <div class="head">
+    <a class="gris" href="index.php?page=control&param=Accueil">Mon Compte | </a>
+    <a class="gris" href="index.php?page=control&param=Accueil">Panier | </a>
     <?php
 
       if (!isset($_SESSION['id']))
@@ -24,10 +24,10 @@
 
     ?>
 
-	</div>
+  </div>
 
-	<div class="trait"></div>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="trait"></div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#"><img src="img/website/petanque-master-logo.png" alt="Photo de montagne" width="120px" /></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
