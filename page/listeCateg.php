@@ -1,8 +1,8 @@
-<div>
+<div class='police'>
+	<br><center><h1>Les Categories</h1></center><br>
 	<table>
 		<tr>
-			<td>Id</td>
-			<td>Libelle</td>
+
 			<?php
 				if (isset($_SESSION['admin']) && $_SESSION['admin']==1)
 				{
@@ -10,6 +10,27 @@
 				}
 			?>
 		</tr>
+		<!-- Section Catégories -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm6">
+      <a href="#">
+        <img src="img/website/BOULEScateg.png" alt="Nos boules de petanque" width="350px" />
+      </a>
+    </div>
+    <div class="col-sm6">
+      <a class="margin" href="#">
+        <img src="img/website/ACCESSOIREScateg.png" alt="Nos accessoires" width="350px" />
+      </a>
+    </div>
+    <div class="col-sm6">
+      <a href="#">
+        <img src="img/website/TEXTILEScateg.png" alt="Nos textiles/goodies" width="350px" />
+      </a>
+    </div>
+  </div>
+</div><br> 
+		<center>
 		<?php
 			foreach ($lesLignes as $uneCateg)
 			{
@@ -26,6 +47,7 @@
             	echo "</tr>";
 			}
 		?>
+	</center>
 		</tr>
 
 	</table>
