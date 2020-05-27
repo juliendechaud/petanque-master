@@ -9,5 +9,6 @@
 5. Ben c'est fini en faite. Tout marche, enormous comme dirait l'autre !
 
 Si vous voulez vous connecter avec les comptes utilisateurs "admin" de pétanque master voici les identifiants :
- * email : juju@gmail.com
- * mot de passe : ouioui
+ * email : bob.marley@gmail.com
+ * mot de passe : coucou
+ 
