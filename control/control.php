@@ -14,6 +14,12 @@
 				include (dirname(__FILE__)."/../page/listeArticle.php");
 				break;
 
+			case "ListeArticleCateg" :
+				$categ = $_REQUEST['categ'];
+				$lesLignes = $Pdo->getListeArticlesCateg($categ);
+				include (dirname(__FILE__)."/../page/listeArticle.php");
+				break;
+
 			case "ListeCateg" :
 				$lesLignes = $Pdo->getListeCateg();
 				include (dirname(__FILE__)."/../page/listeCateg.php");
