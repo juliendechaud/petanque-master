@@ -142,11 +142,12 @@
 				$_SESSION['id'] = $laLigne['mail'];
 				$_SESSION['nom'] = $laLigne['nom'];
 				$_SESSION['admin'] = $laLigne['admin'];
-				echo "Connexion réussi !";	
+				echo "<br><br><center><h3 class=police>Connexion réussi !</h3><br><br>";
+				echo "<img src='img/website/validé.png' height=100px><br><br><br><br></center>";
 			}
 			else
 			{
-				echo "Erreur";
+				echo "<br><br><center><h3 class=police style='color:red;'>Erreur de connexion</h3></center><br><br><br><br>";
 			}	
 			return $laLigne;
 		}
