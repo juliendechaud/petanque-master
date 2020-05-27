@@ -123,7 +123,7 @@
 
 		public function recherche($mots)
 		{
-			$req = "SELECT * FROM articles WHERE nom LIKE '%".$mots."%' OR description LIKE '%".$mots."%'";
+			$req = "SELECT * FROM articles WHERE nom LIKE '%".$mots."%'";
 			//echo $req;
 			$res = PdoDB::$monPdo->query($req);
 			$lesLignes = $res->fetchAll();
