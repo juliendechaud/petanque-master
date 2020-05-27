@@ -34,17 +34,17 @@
 <div class="container">
   <div class="row">
     <div class="col-sm6">
-      <a href="#">
+      <a href="index.php?page=control&param=ListeArticleCateg&categ=1">
         <img src="img/website/BOULEScateg.png" alt="Nos boules de petanque" width="350px" />
       </a>
     </div>
     <div class="col-sm6">
-      <a class="margin" href="#">
+      <a class="margin" href="index.php?page=control&param=ListeArticleCateg&categ=2">
         <img src="img/website/ACCESSOIREScateg.png" alt="Nos accessoires" width="350px" />
       </a>
     </div>
     <div class="col-sm6">
-      <a href="#">
+      <a href="index.php?page=control&param=ListeArticleCateg&categ=3">
         <img src="img/website/TEXTILEScateg.png" alt="Nos textiles/goodies" width="350px" />
       </a>
     </div>

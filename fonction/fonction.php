@@ -39,6 +39,19 @@
 			return $lesLignes; 
 		}
 
+		public function getListeArticlesCateg($categ)
+		{
+			$req = "Select articles.ref as ref, articles.nom as nom, articles.prix as prix, articles.photo as photo, articles.description as descri, categorie.libelle as categ From articles";
+			$req.= " Inner Join categorie On articles.categ = categorie.idcateg";
+			$req.= " WHERE categ = ".$categ;
+			$req.= " GROUP BY ref";
+			//echo $req;
+			$res = PdoDB::$monPdo->query($req);
+			$lesLignes = $res->fetchAll();
+			$nbLignes = count($lesLignes);
+			return $lesLignes; 
+		}
+
 		public function getListeCateg()
 		{
 			$req = "SELECT idcateg as id, libelle as lib FROM categorie";
