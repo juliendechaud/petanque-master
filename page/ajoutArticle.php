@@ -1,49 +1,48 @@
-<div>
-	
-	<p>ajouter un article</p>
-	<form action="index.php?page=control&param=AjoutArticleValid" method="post">
-		<?php
-			$nom = "";
-			$prix = "";
-			$photo = "";
-			$descri = "";
-			$categ = "";
-		?>
-		<div>
-			<label for="nom">Nom : </label>
-			<input type="text" name="nom" value="<?php echo $nom ?>" required>
-		</div>
-		<div>
-			<label for="prix">Prix : </label>
-			<input type="text" name="prix" value="<?php echo $prix ?>" required>
-			<label for="prix">€</label>
-		</div>
-		<div>
-			<label for="photo">Photo : </label>
-			<input type="text" name="photo" value="<?php echo $photo ?>" required>
-		</div>
-		<div>
-			<label for="descri">Description : </label>
-			<input type="text" name="descri" value="<?php echo $descri ?>" required>
-		</div>
-		<div>
-			<label for="categ">Catégorie : </label>
-			<select name="categ" required>
-				<option value="">Choisir une catégorie</option>
-				<?php
-					foreach ($lesLignes as $uneCateg)
-					{
-						$categ = $uneCateg['id'];
-						$lib = $uneCateg['lib'];
+<div class="police" style="margin-left: 30%; margin-right: 30%;">
 
-						echo "<option value=".$categ.">".$lib."</option>";
-					}
-				?>
-			</select>
-		</div>
-		<div>
-			<input type="submit" value="Valider">
-		</div>
-	</form>
+		<center><h1>Ajouter un article</h1></center>
+		<form action="index.php?page=control&param=AjoutArticleValid" method="post">
+			<?php
+				$nom = "";
+				$prix = "";
+				$photo = "";
+				$descri = "";
+				$categ = "";
+			?>
+			<div class="form-group">
+				<label for="nom">Nom : </label>
+				<input  class="form-control" type="text" name="nom" value="<?php echo $nom ?>" required>
+			</div>
+			<div class="form-group">
+				<label for="prix">Prix : </label>
+				<input class="form-control" type="text" name="prix" placeholder="€"value="<?php echo $prix ?>" required>
+			</div>
+			<div class="form-group">
+				<label for="photo">Photo : </label>
+				<input class="form-control" type="text" name="photo" value="<?php echo $photo ?>" required>
+			</div>
+			<div class="form-group">
+				<label for="descri">Description : </label>
+				<input class="form-control" type="text" name="descri" value="<?php echo $descri ?>" required>
+			</div>
+			<div class="form-group">
+				<label for="categ">Catégorie : </label>
+				<select class="form-control" name="categ" required>
+					<option value="">Choisir une catégorie</option>
+					<?php
+						foreach ($lesLignes as $uneCateg)
+						{
+							$categ = $uneCateg['id'];
+							$lib = $uneCateg['lib'];
+
+							echo "<option value=".$categ.">".$lib."</option>";
+						}
+					?>
+				</select>
+			</div>
+			<div class="form-group">
+				<center><button type="submit" class="btn btn-primary">Valider</button></center>
+			</div>
+		</form>
 
 </div>

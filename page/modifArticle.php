@@ -1,7 +1,7 @@
 <div class="police" style="margin-left: 30%; margin-right: 30%;">
 	<center>
 	<br>
-	<h1>Modifier un article</h1>
+	<h1>Modifier un article</h1></center>
 		<form action="index.php?page=control&param=ModifArticleValid" method="post">
 			<?php
 				$ref = $unArticle["ref"];
@@ -54,8 +54,7 @@
 				</select>
 			</div>
 			<div>
-				<button type="submit" class="btn btn-primary">Valider</button><br><br>
+				<center><button type="submit" class="btn btn-primary">Valider</button><br><br></center>
 			</div>
 		</form>
-	</center>
 </div>

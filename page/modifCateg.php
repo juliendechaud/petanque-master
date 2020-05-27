@@ -1,7 +1,7 @@
 <div class="police" style="margin-left: 30%; margin-right: 30%;">
 	<center>
 		<br>
-		<h1>Modifier une catégorie</h1>
+		<h1>Modifier une catégorie</h1></center>
 		<form action="index.php?page=control&param=ModifCategValid" method="post">
 			<?php
 				$id = $uneCateg["idcateg"];
@@ -16,8 +16,7 @@
 				<input class="form-control" type="text" name="lib" value="<?php echo $lib ?>" required>
 			</div>
 			<div class="form-group">
-				<button type="submit" class="btn btn-primary">Valider</button>
+				<center><button type="submit" class="btn btn-primary">Valider</button></center>
 			</div>
 		</form>
-	</center>
 </div>
